@@ -5,8 +5,9 @@ def oxford_comma(array)
   elsif array.size == 2
     oxford = "#{array[0]} and #{array[1]}"
   else
-    for i in (0..(array.size - 2))
-      oxford.<<(array[i])
+    oxford = array[0]
+    for i in (1..(array.size - 2))
+      oxford.<<(", and #{array[i]}")
     end
     oxford.<<("and " + array[-1])
   end
